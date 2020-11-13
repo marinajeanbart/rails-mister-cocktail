@@ -14,3 +14,5 @@ mint = Ingredient.create!(name: "mint leaves")
 
 vomito = Cocktail.create!(name: "Vomito")
 Dose.create!(description: "very strong", ingredient_id: mint.id, cocktail_id: vomito.id)
+olivier = Cocktail.create!(name: "l'Olivier")
+Dose.create!(description: "smells like summer", ingredient_id: lemon.id, cocktail_id: olivier.id)
