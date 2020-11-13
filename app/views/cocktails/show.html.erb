@@ -6,8 +6,10 @@
     <li><%= dose.description %></li>
     <li><%= dose.ingredient.name %></li>
     <li><%= link_to "Delete dose", dose_path(dose), method: :delete, confirm: { inclusion: "Are you sure?"}, class: "btn btn-primary" %></li>
-
   <% end %>
 
 </ul>
-    <%= link_to "Add a dose", new_cocktail_dose_path(:cocktail_id => @cocktail.id), class: "btn btn-primary" %>
+<%= link_to "Add a dose", new_cocktail_dose_path(:cocktail_id => @cocktail.id), class: "btn btn-primary" %>
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>

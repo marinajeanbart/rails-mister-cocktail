@@ -1,9 +1,8 @@
 heroku <div class=form>
   <h1>Create your cocktail</h1>
   <p>Please. Be creative.</p>
-<%= form_for @cocktail do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
   <%= f.input :photo, as: :file %>
 
 
