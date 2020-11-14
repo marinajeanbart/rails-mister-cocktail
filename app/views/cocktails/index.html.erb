@@ -2,12 +2,9 @@
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
-
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
@@ -23,7 +20,6 @@
   </div>
 </div>
 
-
 <div class="banner">
   <div class="container">
     <h1>Cocktails, mocktails. Fancy, schmancy!</h1>
@@ -33,16 +29,10 @@
 
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
-      <div class="card-category">
+    <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
       <%= link_to "x", cocktail_path(cocktail), method: :delete, data: {:confirm => 'Are you sure?'}, class: "btn-delete" %>
-      </div>
-      <% end %>
-
+    </div>
+    <% end %>
 </div>
-
-
   <%= link_to "Create your cocktail", new_cocktail_path(@cocktail), class: 'btn btn-primary' %>
-
-
-
