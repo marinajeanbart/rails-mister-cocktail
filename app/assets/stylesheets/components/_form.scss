@@ -1,0 +1,42 @@
+.form h1, p {
+  color: #6C704F;
+}
+
+
+.btn-primary {
+  margin-top: 20px;
+  margin-left:20px;
+  background-color: #E6BCA2;
+  border-color: #E6BCA2;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 20%;
+}
+
+.btn-primary:hover {
+  background-color: #6C704F;
+  border-color: #6C704F;
+}
+
+.search-form-control {
+  position: relative;
+}
+
+.search-form-control .btn {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  right: 8px;
+}
+
+.search-form-control .form-control {
+  height: 3.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border: 1px solid #E7E7E7;
+}
+
+.search-form-control .form-control:focus {
+  border: 1px solid #1EDD88;
+  outline: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
