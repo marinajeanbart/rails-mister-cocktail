@@ -29,7 +29,9 @@
 
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+    if @cocktail.photo.attached?
+      <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
+    <% end %>
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
       <%= link_to "x", cocktail_path(cocktail), method: :delete, data: {:confirm => 'Are you sure?'}, class: "btn-delete" %>
     </div>
