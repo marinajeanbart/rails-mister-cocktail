@@ -29,7 +29,7 @@
 
 <div class="cards">
   <% @cocktails.each do |cocktail| %>
-    if @cocktail.photo.attached?
+    <% if cocktail.photo.attached? %>
       <div class="card-category" style="background-image: url('<%= cl_image_path cocktail.photo.key %>')">
     <% end %>
       <%= link_to cocktail.name, cocktail_path(cocktail) %>
